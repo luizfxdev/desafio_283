@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+  overflow-x: hidden;
+}
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* CONTROLES DE ÁUDIO - ADICIONADOS */
+.audio-controls {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  gap: 10px;
+}
+
+.audio-btn {
+  background: rgba(10, 5, 24, 0.9);
+  border: 2px solid #14540d;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.audio-btn:hover {
+  background: rgba(0, 255, 85, 0.3);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 255, 85, 0.5);
+}
+
+.audio-btn:active {
+  transform: scale(0.95);
+}
+
+/* RESTO DO CSS MANTIDO INTACTO */
+.container {
+  background: rgba(10, 5, 24, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  width: 450px;
+  max-width: calc(100vw - 40px);
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.5), inset 0 0 20px rgba(0, 255, 42, 0.3);
+  border: 1px solid rgba(120, 255, 120, 0.3);
+  margin-left: 20px;
+}
+h1 {
+  text-align: center;
+  color: #ffd700;
+  font-size: 2.2rem;
+  margin-bottom: 5px;
+  text-shadow: 0 0 10px rgba(255, 253, 120, 0.7);
+}
+.subtitle {
+  text-align: center;
+  color: #ffd700;
+  margin-bottom: 25px;
+  font-size: 1rem;
+}
+.input-section {
+  margin-bottom: 25px;
+}
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ffd700;
+  font-weight: 500;
+}
+input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 2px solid #14540d;
+  background: rgba(12, 51, 33, 0.7);
+  color: #f0e6ff;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s;
+}
+input:focus {
+  border-color: #ffd700;
+  box-shadow: 0 0 10px rgba(112, 230, 132, 0.5);
+}
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+@media (max-width: 480px) {
+  .buttons {
+    flex-direction: column;
+  }
+  .container {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px;
+  }
+  .audio-controls {
+    top: 10px;
+    right: 10px;
+  }
+  .audio-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+/* Botões com efeito glow (conforme fornecido) */
+.glow-on-hover {
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+.glow-on-hover:active {
+  color: #000;
+}
+.glow-on-hover:active:after {
+  background: transparent;
+}
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+.result-section {
+  background: rgba(8, 43, 26, 0.7);
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid rgba(70, 200, 135, 0.3);
+}
+.result-section h2 {
+  color: #ffd700;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+#resultado-container {
+  min-height: 100px;
+}
+.instruction {
+  text-align: center;
+  color: #ffd700;
+  font-style: italic;
+}
+.result-output {
+  background: rgba(15, 70, 38, 0.6);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border-left: 4px solid #ffd700;
+}
+.result-title {
+  font-weight: bold;
+  color: #ffd700;
+  margin-bottom: 8px;
+  display: block;
+}
+.final-result {
+  background: rgba(15, 70, 38, 0.8);
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+  border: 1px solid #ffd700;
+  box-shadow: 0 0 15px rgba(112, 230, 165, 0.4);
+}
+.step {
+  margin-bottom: 10px;
+  padding-left: 15px;
+  border-left: 2px solid #ffd700;
+  margin-left: 5px;
+}
+.array-display {
+  font-family: monospace;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 5px 0;
+}
+.prime {
+  color: #ffcc00;
+  font-weight: bold;
+}
+.non-prime {
+  color: #a5d6ff;
+}

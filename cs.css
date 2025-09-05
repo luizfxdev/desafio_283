@@ -1,0 +1,14 @@
+.adventure-container::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #15400e, #14540d, #00804b, #48ff00, #00804b, #14540d, #15400e, #14540d, #14540d);
+  border-radius: 22px;
+  z-index: -1;
+  animation: glowing 20s linear infinite;
+  opacity: 0.3;
+  filter: blur(3px);
+}

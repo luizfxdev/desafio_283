@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reino dos Arrays - Organizador de Tesouros</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Background Video (mantido intacto) -->
+    <video autoplay muted loop id="background-video">
+      <source src="/assets/background.mp4" type="video/mp4" />
+      Seu navegador não suporta vídeos HTML5.
+    </video>
+
+    <!-- Audio Theme (mantido intacto) -->
+    <audio loop id="theme-audio">
+      <source src="/assets/theme.mp3" type="audio/mpeg" />
+      Seu navegador não suporta áudio HTML5.
+    </audio>
+
+    <!-- Controles de Áudio (ADICIONADOS) -->
+    <div class="audio-controls">
+      <button id="play-audio" class="audio-btn" title="Tocar música">🎵</button>
+      <button id="pause-audio" class="audio-btn" title="Pausar música">⏸️</button>
+    </div>
+
+    <div class="container">
+      <h1>🏰 Aventuras no Reino dos Arrays</h1>
+      <p class="subtitle">Organizador de Tesouros Mágicos</p>
+      <div class="input-section">
+        <label for="tesouros-input">Insira os tesouros (separados por vírgula):</label>
+        <input type="text" id="tesouros-input" placeholder="Ex: 4, 5, 3, 8, 11, 6, 7" />
+      </div>
+      <div class="buttons">
+        <button id="organizar-btn" class="glow-on-hover" type="button">ORGANIZAR</button>
+        <button id="retornar-btn" class="glow-on-hover" type="button">RETORNAR</button>
+      </div>
+      <div class="result-section">
+        <h2>Resultado</h2>
+        <div id="resultado-container">
+          <p class="instruction">Clique em ORGANIZAR para ver o resultado</p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
