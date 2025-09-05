@@ -1,6 +1,5 @@
 # 🏰✨ Reino dos Arrays — Organizador de Tesouros
 
-📌 *Repositório:* github.com/luizfxdev/desafio_283
 
 🎮 *Inspiração:* Legend of Zelda
 
