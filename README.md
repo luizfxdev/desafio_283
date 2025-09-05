@@ -76,6 +76,7 @@ Independência multimídia: ajustes de áudio não afetam o vídeo.
 ## 🏹 Créditos e Licença
 
 🎨 Estética inspirada em Legend of Zelda (projeto não oficial e sem afiliação).
+
 👨‍💻 Autor: Luiz Felipe de Oliveira (@luizfx.dev)
 
 📜 Escolha de licença recomendada: MIT (ou outra de sua preferência).
