@@ -33,7 +33,9 @@ DESAFIO_283/
 ## 🖥️ Visão Geral da Interface
 
 ✅ O usuário insere números separados por vírgula.
+
 ✅ Ao clicar em "ORGANIZAR", os números primos são identificados, ordenados e reinseridos nas posições originais.
+
 ✅ Controles disponíveis para tocar/pausar a trilha sonora, sem afetar o vídeo de fundo.
 
 ## ⚡ Como Usar (Execução Local)
@@ -64,7 +66,9 @@ Independência multimídia: ajustes de áudio não afetam o vídeo.
 ## 🧩 Problemas Comuns e Soluções
 
 ❌ Áudio não reproduz → Clique na página e use o botão de reprodução; confirme se theme.mp3 está acessível.
+
 ❌ Vídeo pequeno ou ausente → Ajuste CSS (object-fit: cover, z-index).
+
 ❌ Erro CORS ou arquivo não encontrado → Verifique caminhos relativos e permissões no servidor.
 
 ## 🏹 Créditos e Licença
