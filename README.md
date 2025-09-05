@@ -58,8 +58,11 @@ Independência multimídia: ajustes de áudio não afetam o vídeo.
 ## 🛠️ Boas Práticas e Recomendações
 
 🔹 Comprima os arquivos de mídia para melhorar o carregamento.
+
 🔹 Forneça formatos alternativos (ex.: .webm, .ogg).
+
 🔹 Teste em navegadores modernos: Chrome, Firefox, Edge, Safari.
+
 🔹 Verifique em dispositivos móveis para garantir responsividade.
 
 ## 🧩 Problemas Comuns e Soluções
